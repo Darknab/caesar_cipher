@@ -12,7 +12,7 @@ def cipher(text, shift)
   end
   result = []
   encrypted.each_with_index { |element, index| result[index] = element.chr }
-  puts result.join
+  return result.join
 end
 
 def check_overflow(element, min, max)
@@ -23,8 +23,6 @@ def check_overflow(element, min, max)
             else
               element
             end
-
-
 end
 
 puts 'Please enter a text to encrypt'
@@ -35,4 +33,4 @@ while shift > 26 || shift < -26
   puts 'out of range, please inter a correct number for the shift'
   shift = gets.chomp.to_i
 end
-cipher(text, shift)
+puts cipher(text, shift)
