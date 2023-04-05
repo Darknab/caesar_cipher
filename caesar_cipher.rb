@@ -23,6 +23,8 @@ def check_overflow(element, min, max)
             else
               element
             end
+
+
 end
 
 puts 'Please enter a text to encrypt'
